@@ -54,6 +54,91 @@ body{
     color: white;
     text-shadow:  2px 3px 5px black;
     font-size: 1.2rem;
+}
 
+.right-container{
+    display: flex;
+    flex-direction: column;
+    padding: 6rem 0;
+    margin-top: 2.5rem;
 
+}
+
+header{
+    margin-left: 2.5rem;
+    margin-bottom: 3.5rem;
+    margin-right: 10rem;
+    min-width: 15rem;
+}
+
+.form-container {
+    padding: 1.5rem 0;
+    background-color: white;
+    box-shadow: 0px 5px 7px 1px #C4C4C4;
+
+}
+
+.form-container p {
+
+    font-size: 1.5rem;
+    font-weight: 550;
+    line-height: 2rem;
+    margin-left: 2.5rem;
+}
+
+form{
+    flex-wrap: wrap;
+    max-width: calc(480px + 10%);
+    margin-top: 2.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 2.5rem;
+}
+
+.credentials{
+    display: flex;
+    flex-direction: column;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+}
+
+label{
+    margin-bottom: 0.3rem;
+    color: rgb(107, 107, 107);
+    font-weight: 550;
+    letter-spacing: 0.1rem;
+    font-size: 0.9rem;
+}
+
+input{
+    width: 240px;
+    margin: 0;
+    font-family: inherit;
+    font-size: 100%;
+}
+
+.login{
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+    margin-left: 2.5rem;
+}
+
+.submit{    
+    width: 240px;
+    height: 54px;
+    padding: 1rem 3rem;
+    border-radius: 12px;
+    background-color: #214254;
+    color: white;
+    font-size: 1.2rem;
+    box-shadow: 0px 2px 1px 0px #C4C4C4;
+    border: none;
+}
+
+.right-footer{
+    color: white;
+    background-color: black;
+    margin-top: calc(92rem/16);
+    text-align: center;
 }
