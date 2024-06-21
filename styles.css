@@ -1,0 +1,59 @@
+@import "modern-normalize";
+
+:root {
+  line-height: 1.5;
+}
+
+h1, h2, h3, h4, h5, figure, p, ol, ul {
+  margin: 0;
+}
+
+ol[role="list"], ul[role="list"] {
+  list-style: none;
+  padding-inline: 0;
+}
+
+img {
+  display: block;
+  max-inline-size: 100%;
+}
+
+body{
+    height: 100vh;
+    margin: 0px;
+    display: flex;
+    }
+
+.left-container {
+    background-image: url(img/lightSide.jpg);
+    background-position: center;
+    background-size: cover; 
+    height: 100%;
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo{
+    background-color: rgb(0 0 0 / 30%);
+    width: 100%;
+    height: 9.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    color: white;
+    text-shadow:  3px 3px 5px black;
+    margin: calc(200rem/16);
+    
+}
+
+.left-footer{
+    color: white;
+    text-shadow:  2px 3px 5px black;
+    font-size: 1.2rem;
+
+
+}
