@@ -58,7 +58,7 @@ body{
 .right-container{
     display: flex;
     flex-direction: column;
-    padding: 6rem 0;
+    padding-top: 6rem;
     margin-top: 2.5rem;
 
 }
@@ -142,6 +142,6 @@ input{
 .right-footer{
     color: white;
     background-color: black;
-    margin-top: calc(92rem/16);
     text-align: center;
+    margin-top: auto;
 }
