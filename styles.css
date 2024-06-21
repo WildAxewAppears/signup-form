@@ -28,7 +28,6 @@ body{
     background-image: url(img/lightSide.jpg);
     background-position: center;
     background-size: cover; 
-    height: 100%;
     width: 45%;
     display: flex;
     flex-direction: column;
@@ -122,6 +121,10 @@ input{
     flex-direction: column;
     margin-top: 2rem;
     margin-left: 2.5rem;
+}
+
+.login p{
+    margin-top: 24px;
 }
 
 .submit{    
