@@ -30,39 +30,46 @@
         <form action="#" method="post" id="registration">
             <div class="credentials">
                 <label for="first-name">First Name</label>
-                <input type="text" id="first-name" name="first-name">
+                <input type="text" id="first-name" name="first-name" placeholder="Please enter your name" required>
+                <span></span>
             </div>
 
             <div class="credentials">
                 <label for="last-name">Last Name</label>
-                <input type="text" id="last-name" name="last-name">
+                <input type="text" id="last-name" name="last-name" placeholder="Please enter your surname" required>
+                <span></span>
             </div>
 
             <div class="credentials">
                 <label for="email">Email</label>
-                <input type="email" id="email" name="email">
+                <input type="email" id="email" name="email" placeholder="Fusco@mail.com" required>
+                <span></span>
             </div>
 
             <div class="credentials">
                 <label for="phone">Phone Number</label>
-                <input type="tel" id="phone" name="phone" pattern="[0-9]{10}">
+                <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" placeholder="Please enter your phone number" required>
+                <span></span>
             </div>
 
             <div class="credentials">
                 <label for="password">Password</label>
-                <input type="password" id="password" name="password">
+                <input type="password" id="password" name="password" minlength="8" maxlength="12" placeholder="Must have at least 8 characters" required>
+                <span></span>
+                <span class="error">* Password do not match</span>
             </div>
 
             <div class="credentials">
                 <label for="confirm-password">Confirm Password</label>
-                <input type="password" id="confirm-password" name="confirm-password">
+                <input type="password" id="confirm-password" name="confirm-password" placeholder="Please confirm your password" required>
+                <span></span>
             </div>
         </form>
     </div>
 
         <div class="login">
 
-            <button class="submit" type="submit" form="a-form">Submit</button>
+            <button class="submit" type="submit" form="registration">Submit</button>
 
             <p>Already have an account? <a href="#">Log in</a> </p>
 
