@@ -44,14 +44,45 @@ buttonSubmit.addEventListener("click", (e) => {
 });
 
 buttonTheme.addEventListener("click", function(){
+    divLogo = document.querySelector(".logo")
     
     if (root.className === 'dark') {
         root.classList.replace("dark","light")
+
+        while(divLogo.firstChild){
+            divLogo.removeChild(divLogo.firstChild);
+        }
+        let darkImage = document.createElement("img")
+        darkImage.src = "img/lighsideLogo.png"
+        darkImage.height = 150
+        darkImage.width = 150
+        divLogo.appendChild(darkImage)
+
+        let logoH1 = document.createElement("h1")
+        logoH1.classList.add("logo-title")
+        logoH1.textContent = "New Jedi Order"
+        divLogo.appendChild(logoH1)
        
         buttonTheme.textContent = "Dark side"
       } else {
-        root.classList.replace("light","dark")
-        buttonTheme.textContent = "Light side"
+            root.classList.replace("light","dark")
+            while(divLogo.firstChild){
+                divLogo.removeChild(divLogo.firstChild);
+            }
+            let darkImage = document.createElement("img")
+            darkImage.src = "img/darksideLogo.png"
+            darkImage.height = 150
+            darkImage.width = 150
+            divLogo.appendChild(darkImage)
+
+            let logoH1 = document.createElement("h1")
+            logoH1.classList.add("logo-title")
+            logoH1.textContent = "Sith Order"
+            divLogo.appendChild(logoH1)
+            
+            
+            buttonTheme.textContent = "Light side"
+
       }
      
 })
