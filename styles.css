@@ -5,6 +5,42 @@
   line-height: 1.5;
 }
 
+:root.light{
+    --body-background-color:#f9fafb;
+    --text-color:white;
+    --right-container-text-color: black;
+    --form-background-color:white;
+    --label-text-color:rgb(107, 107, 107);
+    --input-text-color:white;
+    --input-valid: #388E3C;
+    --input-invalid:  #D32F2F;
+    --button-bg-color: #214254;
+    --button-bg-hover: #1B3A4B;
+    --form-box-shadow: 0px 5px 7px 1px #C4C4C4;
+    --submit-box-shadow:  0px 2px 1px 0px #C4C4C4;
+    --background-image: url(img/lightSide.jpg);
+    --error-text-color: red;
+}
+
+:root.dark {
+    --body-background-color: #1a1a1a;
+    --text-color: white;
+    --right-container-text-color: white;
+    --form-background-color: #333333;
+    --label-text-color: #bbbbbb;
+    --input-text-color: white;
+    --input-valid: #00E676;
+    --input-invalid: #FF1744;
+    --button-bg-color: #D32F2F;
+    --button-bg-hover: #B71C1C;
+    --background-image: url(img/darkSide.jpg);
+    --form-box-shadow: 0px 5px 7px 1px rgba(255, 0, 0, 0.5);
+    --submit-box-shadow: 0px 2px 1px 0px rgba(255, 0, 0, 0.5);
+    --error-text-color: white;
+    
+
+  }
+
 h1, h2, h3, h4, h5, figure, p, ol, ul {
   margin: 0;
 }
@@ -25,11 +61,11 @@ body{
     margin: 0px;
     display: flex;
     position: relative;
-    background-color: #f9fafb;
+    background-color: var(--body-background-color)
     }
 
 .left-container {
-    background-image: url(img/lightSide.jpg);
+    background-image: var(--background-image);
     background-position: center;
     background-size: cover; 
     width: 45%;
@@ -47,14 +83,14 @@ body{
     justify-content: center;
     align-items: center;
     gap: 1.5rem;
-    color: white;
+    color: var( --text-color);
     text-shadow:  3px 3px 5px black;
     margin: calc(200rem/16);
     
 }
 
 .left-footer{
-    color: white;
+    color: var( --text-color);
     text-shadow: 
     2px 2px 4px black, 1px 1px 4px black, 3px 2px 4px black, 0px 3px 4px black, 0 0 5px black;
     font-size: 1.2rem;
@@ -74,6 +110,7 @@ header{
     margin-bottom: 3.5rem;
     margin-right: 10rem;
     min-width: 15rem;
+    color: var(--right-container-text-color);
 }
 
 header h2:nth-of-type(2) {
@@ -94,8 +131,8 @@ header h2:nth-of-type(2) {
 
 .form-container {
     padding: 1.5rem 0;
-    background-color: white;
-    box-shadow: 0px 5px 7px 1px #C4C4C4;
+    background-color: var(--form-background-color);
+    box-shadow: var(--form-box-shadow);
 
 }
 
@@ -105,6 +142,7 @@ header h2:nth-of-type(2) {
     font-weight: 550;
     line-height: 2rem;
     margin-left: 2.5rem;
+    color: var(--text-color);
 }
 
 form{
@@ -125,7 +163,7 @@ form{
 
 label{
     margin-bottom: 0.3rem;
-    color: rgb(107, 107, 107);
+    color: var(--right-container-text-color);
     font-weight: 550;
     letter-spacing: 0.1rem;
     font-size: 0.9rem;
@@ -147,7 +185,7 @@ input + span {
     font-size: 0.7rem;
     position: absolute;
     content: "required";
-    color: white;
+    color: var(--input-text-color); 
     background-color: black;
     padding: 3px 15px;
     top: -53px;
@@ -155,15 +193,22 @@ input + span {
   }
 
   input:valid {
-    border-color:  #388E3C; /* Colore quando l'input è valido */
+    border-color: var(--input-valid); 
     box-shadow: 0 4px 6px rgba(70, 177, 75, 0.2);
     outline: none;
 }
 
 input:invalid {
-    border-color: #D32F2F; /* Colore quando l'input è non valido */
+    border-color: var(--input-invalid); 
     box-shadow: 0 4px 6px rgba(211, 47, 47, 0.3);
     outline: none;
+}
+
+.error{
+    font-size: 0.7rem;
+    color: red;
+    margin-top: 3px;
+    visibility: hidden;
 }
 
 .login{
@@ -175,6 +220,7 @@ input:invalid {
 
 .login p{
     margin-top: 24px;
+    color: var(--right-container-text-color);
 }
 
 .submit{    
@@ -182,17 +228,17 @@ input:invalid {
     height: 54px;
     padding: 1rem 3rem;
     border-radius: 12px;
-    background-color: #214254;
+    background-color: var(--button-bg-color);
     color: white;
     font-size: 1.2rem;
-    box-shadow: 0px 2px 1px 0px #C4C4C4;
+    box-shadow: var(--submit-box-shadow);
     border: none;
     transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
     cursor: pointer;
 }
 
 .submit:hover {
-    background-color: #1B3A4B; /* Colore più scuro per hover */
+    background-color: var(--button-bg-hover); 
 }
 
 .submit:active {
@@ -201,7 +247,7 @@ input:invalid {
 }
 
 .right-footer{
-    color: white;
+    color: var(--text-color);
     background-color: black;
     text-align: center;
     margin-top: auto;
