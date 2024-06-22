@@ -20,9 +20,9 @@
     --submit-box-shadow:  0px 2px 1px 0px #C4C4C4;
     --background-image: url(img/lightSide.jpg);
     --error-text-color: red;
-
     --theme-bg-color: black;
     --theme-text-color: white;
+    --link-text-color: #388E3C
 }
 
 :root.dark {
@@ -40,9 +40,9 @@
     --form-box-shadow: 0px 5px 7px 1px rgba(255, 0, 0, 0.5);
     --submit-box-shadow: 0px 2px 1px 0px rgba(255, 0, 0, 0.5);
     --error-text-color: white;
-
     --theme-bg-color: white;
     --theme-text-color: black;
+    --link-text-color:#D32F2F;
     
 
   }
@@ -254,12 +254,35 @@ input:invalid {
     box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.2);
 }
 
+a{
+    text-decoration: none;
+    color: var(--link-text-color);
+}
+a:hover{
+    text-decoration: underline;
+}
+
 .right-footer{
-    color: var(--text-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: black;
     text-align: center;
     margin-top: auto;
+    color: white;
 }
 
+.right-footer a {
+    color: white;
+}
 
+@media only screen and (max-width: 768px) {
+    body{
+        display: flex;
+        flex-direction: column;
+        }
 
+        .left-container {
+            width: 100%;
+        }
+    }

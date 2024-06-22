@@ -72,7 +72,7 @@ buttonTheme.addEventListener("click", function(){
             let darkImage = document.createElement("img")
             darkImage.src = "img/darksideLogo.png"
             darkImage.height = 150
-            darkImage.width = 150
+            darkImage.width = 140
             divLogo.appendChild(darkImage)
 
             let logoH1 = document.createElement("h1")
