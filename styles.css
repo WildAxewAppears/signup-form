@@ -20,6 +20,9 @@
     --submit-box-shadow:  0px 2px 1px 0px #C4C4C4;
     --background-image: url(img/lightSide.jpg);
     --error-text-color: red;
+
+    --theme-bg-color: black;
+    --theme-text-color: white;
 }
 
 :root.dark {
@@ -37,6 +40,9 @@
     --form-box-shadow: 0px 5px 7px 1px rgba(255, 0, 0, 0.5);
     --submit-box-shadow: 0px 2px 1px 0px rgba(255, 0, 0, 0.5);
     --error-text-color: white;
+
+    --theme-bg-color: white;
+    --theme-text-color: black;
     
 
   }
@@ -117,7 +123,7 @@ header h2:nth-of-type(2) {
     margin-top: 1rem; 
 }
 
-.theme {
+#theme {
     position: absolute;
     top: 1px;
     right: 10px;
@@ -127,6 +133,8 @@ header h2:nth-of-type(2) {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s;
+    background-color: var(--theme-bg-color);
+    color: var(--theme-text-color);
 }
 
 .form-container {
@@ -206,7 +214,7 @@ input:invalid {
 
 .error{
     font-size: 0.7rem;
-    color: red;
+    color: var(--error-text-color);
     margin-top: 3px;
     visibility: hidden;
 }
@@ -223,7 +231,7 @@ input:invalid {
     color: var(--right-container-text-color);
 }
 
-.submit{    
+#submit{    
     width: 240px;
     height: 54px;
     padding: 1rem 3rem;
@@ -237,11 +245,11 @@ input:invalid {
     cursor: pointer;
 }
 
-.submit:hover {
+#submit:hover {
     background-color: var(--button-bg-hover); 
 }
 
-.submit:active {
+#submit:active {
     transform: scale(0.95);
     box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.2);
 }
