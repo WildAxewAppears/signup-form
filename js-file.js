@@ -2,7 +2,7 @@ const buttonSubmit = document.querySelector("#submit");
 
 const buttonTheme = document.querySelector("#theme");
 
-let root = document.querySelector(".light")
+let htmlClass = document.querySelector(".light")
 
 let errorSpan = document.querySelector(".error")
 
@@ -44,19 +44,22 @@ buttonSubmit.addEventListener("click", (e) => {
 });
 
 buttonTheme.addEventListener("click", function(){
+
     divLogo = document.querySelector(".logo")
     
-    if (root.className === 'dark') {
-        root.classList.replace("dark","light")
+    if (htmlClass.className === 'dark') {
+        htmlClass.classList.replace("dark","light")
 
         while(divLogo.firstChild){
             divLogo.removeChild(divLogo.firstChild);
         }
-        let darkImage = document.createElement("img")
-        darkImage.src = "img/lighsideLogo.png"
-        darkImage.height = 150
-        darkImage.width = 150
-        divLogo.appendChild(darkImage)
+
+        let lightImage = document.createElement("img")
+        lightImage.src = "img/lighsideLogo.png"
+        lightImage.height = 150
+        lightImage.width = 150
+        lightImage.alt= "New jedi Order logo"
+        divLogo.appendChild(lightImage)
 
         let logoH1 = document.createElement("h1")
         logoH1.classList.add("logo-title")
@@ -64,24 +67,29 @@ buttonTheme.addEventListener("click", function(){
         divLogo.appendChild(logoH1)
        
         buttonTheme.textContent = "Dark side"
-      } else {
-            root.classList.replace("light","dark")
-            while(divLogo.firstChild){
-                divLogo.removeChild(divLogo.firstChild);
-            }
-            let darkImage = document.createElement("img")
-            darkImage.src = "img/darksideLogo.png"
-            darkImage.height = 150
-            darkImage.width = 140
-            divLogo.appendChild(darkImage)
+      } 
 
-            let logoH1 = document.createElement("h1")
-            logoH1.classList.add("logo-title")
-            logoH1.textContent = "Sith Order"
-            divLogo.appendChild(logoH1)
+    else {
+        htmlClass.classList.replace("light","dark");
+
+        while(divLogo.firstChild){
+            divLogo.removeChild(divLogo.firstChild)
+        };
+
+        let darkImage = document.createElement("img")
+        darkImage.src = "img/darksideLogo.png"
+        darkImage.height = 150
+        darkImage.width = 140
+        darkImage.alt= "Sith Order logo"
+        divLogo.appendChild(darkImage)
+
+        let logoH1 = document.createElement("h1")
+        logoH1.classList.add("logo-title")
+        logoH1.textContent = "Sith Order"
+        divLogo.appendChild(logoH1)
             
             
-            buttonTheme.textContent = "Light side"
+        buttonTheme.textContent = "Light side"
 
       }
      

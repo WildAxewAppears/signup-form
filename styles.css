@@ -1,9 +1,24 @@
-@import "modern-normalize";
+@import "/home/wildaxewappears/node_modules/modern-normalize/modern-normalize.css";
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
 
 :root {
   line-height: 1.5;
 }
+
+h1, h2, h3, h4, h5, figure, p, ol, ul {
+    margin: 0;
+  }
+  
+  ol[role="list"], ul[role="list"] {
+    list-style: none;
+    padding-inline: 0;
+  }
+  
+  img {
+    display: block;
+    max-inline-size: 100%;
+  }
+  
 
 :root.light{
     --body-background-color:#f9fafb;
@@ -46,20 +61,6 @@
     
 
   }
-
-h1, h2, h3, h4, h5, figure, p, ol, ul {
-  margin: 0;
-}
-
-ol[role="list"], ul[role="list"] {
-  list-style: none;
-  padding-inline: 0;
-}
-
-img {
-  display: block;
-  max-inline-size: 100%;
-}
 
 body{
     font-family: 'Roboto', sans-serif;
@@ -150,7 +151,7 @@ header h2:nth-of-type(2) {
     font-weight: 550;
     line-height: 2rem;
     margin-left: 2.5rem;
-    color: var(--text-color);
+    color: var(--right-container-text-color);
 }
 
 form{
@@ -178,6 +179,7 @@ label{
 }
 
 input{
+    height: 28px;
     width: 240px;
     margin: 0;
     font-family: inherit;
@@ -270,6 +272,7 @@ a:hover{
     text-align: center;
     margin-top: auto;
     color: white;
+    height: calc(30rem/16);
 }
 
 .right-footer a {
